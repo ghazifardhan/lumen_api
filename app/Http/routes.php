@@ -18,3 +18,6 @@ $app->get('/', function () use ($app) {
 $app->get('/{id}', function($id){
     echo "Hai " .$id;
 });
+
+$app->post('/book', 'BookController@create');
+$app->get('/book', 'BookController@index');
